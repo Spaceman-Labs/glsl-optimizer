@@ -238,12 +238,12 @@ main(int argc, char **argv)
       if (len < 6)
 	 usage_fail(argv[0]);
 
-      const char *const ext = & argv[optind][len - 5];
-      if (strncmp(".vert", ext, 5) == 0)
+      const char *const ext = & argv[optind][len - 4];
+      if (strncmp(".vsh", ext, 5) == 0)
 	 shader->Type = GL_VERTEX_SHADER;
-      else if (strncmp(".geom", ext, 5) == 0)
+      else if (strncmp(".gsh", ext, 5) == 0)
 	 shader->Type = GL_GEOMETRY_SHADER;
-      else if (strncmp(".frag", ext, 5) == 0)
+      else if (strncmp(".fsh", ext, 5) == 0)
 	 shader->Type = GL_FRAGMENT_SHADER;
       else
 	 usage_fail(argv[0]);
