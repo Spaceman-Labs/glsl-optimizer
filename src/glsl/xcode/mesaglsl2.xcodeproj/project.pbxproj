@@ -840,6 +840,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = mesaglsl2;
+				SDKROOT = "";
 			};
 			name = Debug;
 		};
@@ -851,6 +852,7 @@
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = mesaglsl2;
+				SDKROOT = "";
 			};
 			name = Release;
 		};
@@ -860,7 +862,7 @@
 				ARCHS = i386;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = 4.0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -871,7 +873,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.4;
+				SDKROOT = "";
 			};
 			name = Debug;
 		};
@@ -880,7 +882,7 @@
 			buildSettings = {
 				ARCHS = i386;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = 4.0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -889,7 +891,7 @@
 					../../mesa,
 				);
 				PREBINDING = NO;
-				SDKROOT = macosx10.4;
+				SDKROOT = "";
 			};
 			name = Release;
 		};
@@ -906,6 +908,7 @@
 				INSTALL_PATH = /usr/local/bin;
 				PREBINDING = NO;
 				PRODUCT_NAME = builtin_compiler;
+				SDKROOT = "";
 			};
 			name = Debug;
 		};
@@ -921,6 +924,7 @@
 				INSTALL_PATH = /usr/local/bin;
 				PREBINDING = NO;
 				PRODUCT_NAME = builtin_compiler;
+				SDKROOT = "";
 				ZERO_LINK = NO;
 			};
 			name = Release;
