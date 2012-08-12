@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <errno.h>
 #include "glsl_optimizer.h"
 
 char *readFile(FILE *input)
@@ -61,6 +62,12 @@ int main(int argc, const char * argv[])
 		}
 			
 		FILE *file = fopen(argv[i], "r");
+		if (!file)
+		{
+			fprintf(stderr, "Sorry, I couldn't open \"%s\" (error %d).", argv[i], errno);
+			return 1;
+		}
+		
 		char *string = readFile(file);
 		fclose(file);
 		
