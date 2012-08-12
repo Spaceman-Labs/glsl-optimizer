@@ -199,7 +199,6 @@
 		2BEC22EA1356E98300B5E301 /* opt_copy_propagation_elements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BEC22CB1356E94E00B5E301 /* opt_copy_propagation_elements.cpp */; };
 		2BEC22EB1356E98500B5E301 /* opt_copy_propagation_elements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BEC22CB1356E94E00B5E301 /* opt_copy_propagation_elements.cpp */; };
 		6B62E42815D736540003253E /* libmesaglsl2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC046055464E500DB518D /* libmesaglsl2.a */; };
-		6B881F8215D725430034C0BE /* glsl_optimizer.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B881F8115D725430034C0BE /* glsl_optimizer.1 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,19 +210,6 @@
 			remoteInfo = mesaglsl2;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		6B881F7A15D725430034C0BE /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-				6B881F8215D725430034C0BE /* glsl_optimizer.1 in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2B3854481293BE5000F3E692 /* lower_if_to_cond_assign.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lower_if_to_cond_assign.cpp; path = ../lower_if_to_cond_assign.cpp; sourceTree = SOURCE_ROOT; };
@@ -355,7 +341,6 @@
 		2BEC22CB1356E94E00B5E301 /* opt_copy_propagation_elements.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = opt_copy_propagation_elements.cpp; path = ../opt_copy_propagation_elements.cpp; sourceTree = SOURCE_ROOT; };
 		6B881F7C15D725430034C0BE /* glsl-optimizer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "glsl-optimizer"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B881F7F15D725430034C0BE /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		6B881F8115D725430034C0BE /* glsl_optimizer.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = glsl_optimizer.1; sourceTree = "<group>"; };
 		D2AAC046055464E500DB518D /* libmesaglsl2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmesaglsl2.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -574,7 +559,6 @@
 			isa = PBXGroup;
 			children = (
 				6B881F7F15D725430034C0BE /* main.c */,
-				6B881F8115D725430034C0BE /* glsl_optimizer.1 */,
 			);
 			path = "glsl-optimizer";
 			sourceTree = "<group>";
@@ -670,7 +654,6 @@
 				6B881F8615D72CD70034C0BE /* Headers */,
 				6B881F7815D725430034C0BE /* Sources */,
 				6B881F7915D725430034C0BE /* Frameworks */,
-				6B881F7A15D725430034C0BE /* CopyFiles */,
 			);
 			buildRules = (
 			);
