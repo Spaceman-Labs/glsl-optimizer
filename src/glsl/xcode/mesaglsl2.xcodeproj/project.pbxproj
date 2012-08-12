@@ -198,7 +198,34 @@
 		2BBA49301254706A00D42573 /* opt_redundant_jumps.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BBA49271254706A00D42573 /* opt_redundant_jumps.cpp */; };
 		2BEC22EA1356E98300B5E301 /* opt_copy_propagation_elements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BEC22CB1356E94E00B5E301 /* opt_copy_propagation_elements.cpp */; };
 		2BEC22EB1356E98500B5E301 /* opt_copy_propagation_elements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BEC22CB1356E94E00B5E301 /* opt_copy_propagation_elements.cpp */; };
+		6B881F8015D725430034C0BE /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B881F7F15D725430034C0BE /* main.c */; };
+		6B881F8215D725430034C0BE /* glsl_optimizer.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B881F8115D725430034C0BE /* glsl_optimizer.1 */; };
+		6B881FCA15D72DBC0034C0BE /* libmesaglsl2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC046055464E500DB518D /* libmesaglsl2.a */; };
+		6B881FCB15D72DE00034C0BE /* glsl_optimizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BA55A5C1207FEA6002DC82D /* glsl_optimizer.h */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B881FCC15D72EBB0034C0BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = mesaglsl2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6B881F7A15D725430034C0BE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				6B881F8215D725430034C0BE /* glsl_optimizer.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2B3854481293BE5000F3E692 /* lower_if_to_cond_assign.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lower_if_to_cond_assign.cpp; path = ../lower_if_to_cond_assign.cpp; sourceTree = SOURCE_ROOT; };
@@ -328,6 +355,9 @@
 		2BBA49261254706A00D42573 /* lower_variable_index_to_cond_assign.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lower_variable_index_to_cond_assign.cpp; path = ../lower_variable_index_to_cond_assign.cpp; sourceTree = SOURCE_ROOT; };
 		2BBA49271254706A00D42573 /* opt_redundant_jumps.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = opt_redundant_jumps.cpp; path = ../opt_redundant_jumps.cpp; sourceTree = SOURCE_ROOT; };
 		2BEC22CB1356E94E00B5E301 /* opt_copy_propagation_elements.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = opt_copy_propagation_elements.cpp; path = ../opt_copy_propagation_elements.cpp; sourceTree = SOURCE_ROOT; };
+		6B881F7C15D725430034C0BE /* glsl-optimizer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "glsl-optimizer"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B881F7F15D725430034C0BE /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		6B881F8115D725430034C0BE /* glsl_optimizer.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = glsl_optimizer.1; sourceTree = "<group>"; };
 		D2AAC046055464E500DB518D /* libmesaglsl2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmesaglsl2.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -336,6 +366,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B881F7915D725430034C0BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B881FCA15D72DBC0034C0BE /* libmesaglsl2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				08FB7795FE84155DC02AAC07 /* Source */,
+				6B881F7E15D725430034C0BE /* glsl-optimizer */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
 			);
 			name = mesaglsl2;
@@ -373,6 +412,7 @@
 			children = (
 				D2AAC046055464E500DB518D /* libmesaglsl2.a */,
 				2BA0803D1352EB9300A1C074 /* builtin_compiler */,
+				6B881F7C15D725430034C0BE /* glsl-optimizer */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -532,9 +572,26 @@
 			name = mesa;
 			sourceTree = "<group>";
 		};
+		6B881F7E15D725430034C0BE /* glsl-optimizer */ = {
+			isa = PBXGroup;
+			children = (
+				6B881F7F15D725430034C0BE /* main.c */,
+				6B881F8115D725430034C0BE /* glsl_optimizer.1 */,
+			);
+			path = "glsl-optimizer";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		6B881F8615D72CD70034C0BE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B881FCB15D72DE00034C0BE /* glsl_optimizer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC043055464E500DB518D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -609,6 +666,25 @@
 			productReference = 2BA0803D1352EB9300A1C074 /* builtin_compiler */;
 			productType = "com.apple.product-type.tool";
 		};
+		6B881F7B15D725430034C0BE /* glsl-optimizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B881F8315D725430034C0BE /* Build configuration list for PBXNativeTarget "glsl-optimizer" */;
+			buildPhases = (
+				6B881F8615D72CD70034C0BE /* Headers */,
+				6B881F7815D725430034C0BE /* Sources */,
+				6B881F7915D725430034C0BE /* Frameworks */,
+				6B881F7A15D725430034C0BE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B881FCD15D72EBB0034C0BE /* PBXTargetDependency */,
+			);
+			name = "glsl-optimizer";
+			productName = "glsl-optimizer";
+			productReference = 6B881F7C15D725430034C0BE /* glsl-optimizer */;
+			productType = "com.apple.product-type.tool";
+		};
 		D2AAC045055464E500DB518D /* mesaglsl2 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "mesaglsl2" */;
@@ -647,6 +723,7 @@
 			targets = (
 				D2AAC045055464E500DB518D /* mesaglsl2 */,
 				2BA0803C1352EB9300A1C074 /* builtin_compiler */,
+				6B881F7B15D725430034C0BE /* glsl-optimizer */,
 			);
 		};
 /* End PBXProject section */
@@ -747,6 +824,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6B881F7815D725430034C0BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B881F8015D725430034C0BE /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC044055464E500DB518D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -827,6 +912,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B881FCD15D72EBB0034C0BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC045055464E500DB518D /* mesaglsl2 */;
+			targetProxy = 6B881FCC15D72EBB0034C0BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB91EC08733DB70010E9CD /* Debug */ = {
@@ -929,6 +1022,49 @@
 			};
 			name = Release;
 		};
+		6B881F8415D725430034C0BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6B881F8515D725430034C0BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -958,6 +1094,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		6B881F8315D725430034C0BE /* Build configuration list for PBXNativeTarget "glsl-optimizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B881F8415D725430034C0BE /* Debug */,
+				6B881F8515D725430034C0BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
