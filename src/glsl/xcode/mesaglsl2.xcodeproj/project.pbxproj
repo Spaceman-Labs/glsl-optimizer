@@ -198,14 +198,12 @@
 		2BBA49301254706A00D42573 /* opt_redundant_jumps.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BBA49271254706A00D42573 /* opt_redundant_jumps.cpp */; };
 		2BEC22EA1356E98300B5E301 /* opt_copy_propagation_elements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BEC22CB1356E94E00B5E301 /* opt_copy_propagation_elements.cpp */; };
 		2BEC22EB1356E98500B5E301 /* opt_copy_propagation_elements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BEC22CB1356E94E00B5E301 /* opt_copy_propagation_elements.cpp */; };
-		6B881F8015D725430034C0BE /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B881F7F15D725430034C0BE /* main.c */; };
+		6B62E42815D736540003253E /* libmesaglsl2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC046055464E500DB518D /* libmesaglsl2.a */; };
 		6B881F8215D725430034C0BE /* glsl_optimizer.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B881F8115D725430034C0BE /* glsl_optimizer.1 */; };
-		6B881FCA15D72DBC0034C0BE /* libmesaglsl2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC046055464E500DB518D /* libmesaglsl2.a */; };
-		6B881FCB15D72DE00034C0BE /* glsl_optimizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BA55A5C1207FEA6002DC82D /* glsl_optimizer.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6B881FCC15D72EBB0034C0BE /* PBXContainerItemProxy */ = {
+		6B62E42615D736500003253E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
@@ -373,7 +371,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B881FCA15D72DBC0034C0BE /* libmesaglsl2.a in Frameworks */,
+				6B62E42815D736540003253E /* libmesaglsl2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,7 +586,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B881FCB15D72DE00034C0BE /* glsl_optimizer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,7 +675,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				6B881FCD15D72EBB0034C0BE /* PBXTargetDependency */,
+				6B62E42715D736500003253E /* PBXTargetDependency */,
 			);
 			name = "glsl-optimizer";
 			productName = "glsl-optimizer";
@@ -828,7 +825,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B881F8015D725430034C0BE /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -914,10 +910,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6B881FCD15D72EBB0034C0BE /* PBXTargetDependency */ = {
+		6B62E42715D736500003253E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D2AAC045055464E500DB518D /* mesaglsl2 */;
-			targetProxy = 6B881FCC15D72EBB0034C0BE /* PBXContainerItemProxy */;
+			targetProxy = 6B62E42615D736500003253E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -952,7 +948,7 @@
 		1DEB91F008733DB70010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = i386;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_VERSION = "";
@@ -973,7 +969,7 @@
 		1DEB91F108733DB70010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = i386;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1041,6 +1037,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -1060,6 +1057,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -1102,6 +1100,7 @@
 				6B881F8515D725430034C0BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
