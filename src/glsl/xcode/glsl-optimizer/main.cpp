@@ -20,7 +20,7 @@ char *readFile(FILE *input)
 	lFileLen = ftell(input);     /* Get file length */
 	rewind(input);               /* Back to start of file */
 	
-	cFile = calloc(lFileLen + 1, sizeof(char));
+	cFile = (char*)calloc(lFileLen + 1, sizeof(char));
 	
 	if(cFile == NULL )
 	{
@@ -36,11 +36,11 @@ int main(int argc, const char * argv[])
 {
 	if (argc < 2)
 	{
-		printf("Usage: %s *.vsh *.fsh\n", argv[0]);
+		printf("Usage: %s *.[vsh|fsh]\n", argv[0]);
 		return 0;
 	}
 	
-	struct glslopt_ctx *ctx = glslopt_initialize(1);
+	struct glslopt_ctx *ctx = glslopt_initialize(true);
 	
 	for (int i = 1; i < argc; i++)
 	{
