@@ -234,7 +234,7 @@ main(int argc, char **argv)
       whole_program->Shaders[whole_program->NumShaders] = shader;
       whole_program->NumShaders++;
 
-      const unsigned len = strlen(argv[optind]);
+      size_t len = strlen(argv[optind]);
       if (len < 6)
 	 usage_fail(argv[0]);
 
